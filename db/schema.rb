@@ -10,7 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_09_17_101029) do
+ActiveRecord::Schema.define(version: 2021_09_20_122658) do
+
+  create_table "skills", force: :cascade do |t|
+    t.string "skill_name"
+    t.string "skill_bg_color"
+    t.string "skill_percent"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
 
   create_table "socials", force: :cascade do |t|
     t.string "title"

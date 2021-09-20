@@ -10,4 +10,7 @@
 #  updated_at :datetime         not null
 #
 class Social < ApplicationRecord
+  def as_json(options = {})
+    super.symbolize_keys.except!(:id, :created_at, :updated_at)
+  end
 end

@@ -3,6 +3,7 @@ class HomeController < ApplicationController
     
     @socials = Social.all 
 
+    @skills = Skill.all
     @user = {
       fullname: "Cao Duy Quang"
     }
