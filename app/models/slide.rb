@@ -1,0 +1,16 @@
+# == Schema Information
+#
+# Table name: slides
+#
+#  id         :integer          not null, primary key
+#  height     :integer
+#  link_img   :string
+#  width      :integer
+#  created_at :datetime         not null
+#  updated_at :datetime         not null
+#
+class Slide < ApplicationRecord
+  def as_json(options = {})
+    super.symbolize_keys.except!(:id, :created_at, :updated_at)
+  end
+end

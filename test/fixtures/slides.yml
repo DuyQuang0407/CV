@@ -1,0 +1,21 @@
+# == Schema Information
+#
+# Table name: slides
+#
+#  id         :integer          not null, primary key
+#  height     :integer
+#  link_img   :string
+#  width      :integer
+#  created_at :datetime         not null
+#  updated_at :datetime         not null
+#
+
+one:
+  link_img: MyString
+  width: 1
+  height: 1
+
+two:
+  link_img: MyString
+  width: 1
+  height: 1

@@ -10,12 +10,30 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_09_20_122658) do
+ActiveRecord::Schema.define(version: 2021_09_20_134152) do
+
+  create_table "educations", force: :cascade do |t|
+    t.string "name"
+    t.string "location"
+    t.integer "start_year", default: 0
+    t.integer "end_year", default: 0
+    t.string "description"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
 
   create_table "skills", force: :cascade do |t|
     t.string "skill_name"
     t.string "skill_bg_color"
     t.string "skill_percent"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "slides", force: :cascade do |t|
+    t.string "link_img"
+    t.integer "width"
+    t.integer "height"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
