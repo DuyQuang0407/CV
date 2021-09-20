@@ -1,16 +1,16 @@
 <header class="d-print-none">
-      <div class="container text-center text-lg-left">
-        <div class="py-3 clearfix">
-          <h1 class="site-title mb-0">Cao Duy Quang</h1>
-          <div class="site-nav">
-            <nav role="navigation">
+  <div class="container text-center text-lg-left">
+    <div class="py-3 clearfix">
+      <h1 class="site-title mb-0"><%= @user[:fullname] %></h1>
+        <div class="site-nav">
+          <nav role="navigation">
               <ul class="nav justify-content-center">
                 <% @socials.each do |social| %>
                   <%= render partial: 'home/partials/social', locals: social%>
                 <%end%>
               </ul>
-            </nav>
-          </div>
+          </nav>
         </div>
-      </div>
-    </header>
+    </div>
+  </div>
+</header>
