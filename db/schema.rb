@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_09_20_134152) do
+ActiveRecord::Schema.define(version: 2021_09_20_140245) do
 
   create_table "educations", force: :cascade do |t|
     t.string "name"
@@ -32,8 +32,8 @@ ActiveRecord::Schema.define(version: 2021_09_20_134152) do
 
   create_table "slides", force: :cascade do |t|
     t.string "link_img"
-    t.integer "width"
-    t.integer "height"
+    t.integer "width", default: 0
+    t.integer "height", default: 0
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

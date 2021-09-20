@@ -3,9 +3,9 @@
 # Table name: slides
 #
 #  id         :integer          not null, primary key
-#  height     :integer
+#  height     :integer          default(0)
 #  link_img   :string
-#  width      :integer
+#  width      :integer          default(0)
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
 #
