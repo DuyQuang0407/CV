@@ -1,15 +1,14 @@
-Trestle.resource(:socials) do
+Trestle.resource(:skills) do
   menu do
-    item :socials, icon: "fa fa-address-book"
+    item :skills, icon: "fa fa-pencil"
   end
 
   # Customize the table columns shown on the index view.
   #
   table do
-    column :id
-    column :title
-    column :href
-    column :icon
+    column :name
+    column :percent
+    column :bg_color
     column :created_at, align: :center
     column :updated_at, align: :center
     actions
@@ -17,10 +16,10 @@ Trestle.resource(:socials) do
 
   # Customize the form fields shown on the new/edit views.
   #
-  form dialog:true do |social|
-    text_field :title, placeholder: "The title of the social. ex: Facebook,..." 
-    text_field :href, placeholder: "The link of the social. ex: abc.com,..."
-    text_field :icon, placeholder: "The icon of social. search at https://fontawesome.com/"
+  form dialog:true do |skill|
+    text_field :name, placeholder: "Skill name"
+    text_field :percent, placeholder: "Skill percent"
+    text_field :bg_color, placeholder: "Skill back ground color"
   end
 
   # By default, all parameters passed to the update and create actions will be
@@ -31,6 +30,6 @@ Trestle.resource(:socials) do
   #   http://guides.rubyonrails.org/action_controller_overview.html#strong-parameters
   #
   # params do |params|
-  #   params.require(:social).permit(:name, ...)
+  #   params.require(:skill).permit(:name, ...)
   # end
 end
