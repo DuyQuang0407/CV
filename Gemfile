@@ -58,3 +58,5 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem "annotate", "~> 3.1"
 
 gem "trestle", "~> 0.9.5"
+
+gem "trestle-auth", "~> 0.4.3"
