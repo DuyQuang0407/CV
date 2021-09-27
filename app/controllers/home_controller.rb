@@ -9,8 +9,6 @@ class HomeController < ApplicationController
 
     @slides = Slide.all
 
-    @user = {
-      fullname: "Cao Duy Quang"
-    }
+    @profile = Profile.first
   end
 end
