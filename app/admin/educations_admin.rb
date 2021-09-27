@@ -11,8 +11,6 @@ Trestle.resource(:educations) do
     column :start_year
     column :end_year
     column :description
-    column :created_at, align: :center
-    column :updated_at, align: :center
     actions
   end
 

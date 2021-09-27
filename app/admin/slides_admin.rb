@@ -9,8 +9,6 @@ Trestle.resource(:slides) do
     column :link_img
     column :width
     column :height
-    column :created_at, align: :center
-    column :updated_at, align: :center
     actions
   end
 

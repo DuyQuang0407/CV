@@ -6,7 +6,7 @@ namespace :social do
       { title: 'Twitter', href: "javascript:void(0)", icon: 'fab fa-twitter'},
       { title: 'Facebook', href: "javascript:void(0)", icon: 'fab fa-facebook'},
       { title: 'Instagram', href: "javascript:void(0)", icon: 'fab fa-instagram'},
-      { title: 'Github', href: "javascript:void(0)", icon: 'fab fa-github'}
+      { title: 'Github', href: "https://github.com/QuangCD", icon: 'fab fa-github'}
     ])  
   end  
 end

@@ -17,17 +17,17 @@ Trestle.resource(:administrators, model: Administrator, scope: Auth) do
     end
   end
 
-  form do |administrator|
-    text_field :email
+  form dialog:true do |administrator|
+    text_field :email, placeholder: "Email"
 
     row do
-      col(sm: 6) { text_field :first_name }
-      col(sm: 6) { text_field :last_name }
+      col(sm: 6) { text_field :first_name, placeholder: "First name" }
+      col(sm: 6) { text_field :last_name, placeholder: "Last name" }
     end
 
     row do
-      col(sm: 6) { password_field :password }
-      col(sm: 6) { password_field :password_confirmation }
+      col(sm: 6) { password_field :password, placeholder: "Password" }
+      col(sm: 6) { password_field :password_confirmation, placeholder: "Confirm password" }
     end
   end
 end

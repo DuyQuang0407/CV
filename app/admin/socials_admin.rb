@@ -6,12 +6,15 @@ Trestle.resource(:socials) do
   # Customize the table columns shown on the index view.
   #
   table do
-    column :id
-    column :title
-    column :href
-    column :icon
-    column :created_at, align: :center
-    column :updated_at, align: :center
+    column :icon, header:false do |item|
+      content_tag :i, nil, class:item.icon
+    end
+
+    column :title do |item|
+      content_tag :a, :href => "#{item.href}" do
+        item.title
+      end
+    end
     actions
   end
 

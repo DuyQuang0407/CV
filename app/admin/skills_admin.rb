@@ -9,8 +9,6 @@ Trestle.resource(:skills) do
     column :name
     column :percent
     column :bg_color
-    column :created_at, align: :center
-    column :updated_at, align: :center
     actions
   end
 
