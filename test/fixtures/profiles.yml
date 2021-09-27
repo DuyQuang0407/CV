@@ -10,6 +10,7 @@
 #  fname      :string
 #  lname      :string
 #  phone      :string
+#  username   :string
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
 #

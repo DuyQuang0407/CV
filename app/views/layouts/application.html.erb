@@ -12,10 +12,11 @@
   </head>
 
   <body>
-    <div class = "container">
-  
-      <%= render 'home/partials/header'%>
-    </div>
+    <% if @profile %>
+      <div class = "container">  
+        <%= render 'home/partials/header'%>
+      </div>
+    <%end%>
     <%= yield %>
   </body>
 </html>
