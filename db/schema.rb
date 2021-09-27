@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_09_27_132213) do
+ActiveRecord::Schema.define(version: 2021_09_27_133759) do
 
   create_table "administrators", force: :cascade do |t|
     t.string "email"
@@ -68,6 +68,9 @@ ActiveRecord::Schema.define(version: 2021_09_27_132213) do
     t.string "icon"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "profile_id"
+    t.index ["profile_id"], name: "index_socials_on_profile_id"
   end
 
+  add_foreign_key "socials", "profiles"
 end

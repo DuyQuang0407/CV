@@ -15,6 +15,7 @@
 #  updated_at :datetime         not null
 #
 class Profile < ApplicationRecord
+  has_many :socials
   def as_json(options = {})
     super.symbolize_keys.except!(:id, :created_at, :updated_at)
   end
