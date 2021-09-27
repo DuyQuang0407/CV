@@ -16,6 +16,9 @@
 #
 class Profile < ApplicationRecord
   has_many :socials
+  scope :by_username, -> (username){
+    where(username:username)
+  }
   def as_json(options = {})
     super.symbolize_keys.except!(:id, :created_at, :updated_at)
   end
