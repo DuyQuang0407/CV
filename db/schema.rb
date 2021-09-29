@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_09_27_133759) do
+ActiveRecord::Schema.define(version: 2021_09_29_065745) do
 
   create_table "administrators", force: :cascade do |t|
     t.string "email"
@@ -31,6 +31,8 @@ ActiveRecord::Schema.define(version: 2021_09_27_133759) do
     t.string "description"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "profile_id"
+    t.index ["profile_id"], name: "index_educations_on_profile_id"
   end
 
   create_table "profiles", force: :cascade do |t|
@@ -52,6 +54,8 @@ ActiveRecord::Schema.define(version: 2021_09_27_133759) do
     t.string "percent"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "profile_id"
+    t.index ["profile_id"], name: "index_skills_on_profile_id"
   end
 
   create_table "slides", force: :cascade do |t|
@@ -60,6 +64,8 @@ ActiveRecord::Schema.define(version: 2021_09_27_133759) do
     t.integer "height", default: 0
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "profile_id"
+    t.index ["profile_id"], name: "index_slides_on_profile_id"
   end
 
   create_table "socials", force: :cascade do |t|
@@ -72,5 +78,8 @@ ActiveRecord::Schema.define(version: 2021_09_27_133759) do
     t.index ["profile_id"], name: "index_socials_on_profile_id"
   end
 
+  add_foreign_key "educations", "profiles"
+  add_foreign_key "skills", "profiles"
+  add_foreign_key "slides", "profiles"
   add_foreign_key "socials", "profiles"
 end

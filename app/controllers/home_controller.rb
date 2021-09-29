@@ -3,14 +3,17 @@ class HomeController < ApplicationController
     p params
     # @socials = Social.all 
 
-    @skills = Skill.all
+    # @skills = Skill.all
 
-    @educations = Education.all
+    # @educations = Education.all
 
-    @slides = Slide.all
+    # @slides = Slide.all
 
     # @profile = Profile.first
     @profile = Profile.by_username(params[:username]).first
     @socials = @profile.socials 
+    @educations = @profile.educations
+    @skills = @profile.skills
+    @slides = @profile.slides
   end
 end

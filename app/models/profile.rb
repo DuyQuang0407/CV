@@ -16,6 +16,9 @@
 #
 class Profile < ApplicationRecord
   has_many :socials
+  has_many :educations
+  has_many :skills
+  has_many :slides
   scope :by_username, -> (username){
     where(username:username)
   }
