@@ -60,3 +60,6 @@ gem "annotate", "~> 3.1"
 gem "trestle", "~> 0.9.5"
 
 gem "trestle-auth", "~> 0.4.3"
+
+gem "wicked_pdf", "~> 2.1"
+gem "wkhtmltopdf-binary", "~> 0.12.6"
