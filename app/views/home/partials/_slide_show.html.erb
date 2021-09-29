@@ -3,7 +3,7 @@
     <div class="fas fa-ellipsis-h"></div>
     <div id="slideshow">
         <div class="slide-wrapper">
-            <% @slides.each do |slide| %>
+            <% slides.each do |slide| %>
               <%= render partial: 'home/partials/slide_item', locals: slide.as_json%>
             <%end%>
         </div>

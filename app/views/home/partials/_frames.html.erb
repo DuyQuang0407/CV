@@ -6,10 +6,10 @@
       </div>
     </div>
     <div class="col-lg-5 col-md-7 text-center text-md-start">
-      <h2 class="h1 mt-2"><%= @profile.fullname %></h2>
+      <h2 class="h1 mt-2"><%= profile.fullname %></h2>
       <p>FullStack Developer</p>
       <div class="d-print-none">
-        <%= link_to 'Download CV',  'javascript:void(0)', class: 'btn btn-light text-dark shadow-sm mt-1 me-1' %>
+        <%= link_to 'Download CV',  profile_path(username: "QuangCD", format: :pdf), target: '_blank', class: 'btn btn-light text-dark shadow-sm mt-1 me-1' %>
         <%= link_to 'Hire Me',  'javascript:void(0)', class: 'btn btn-success shadow-sm mt-1' %>
       </div>
     </div>

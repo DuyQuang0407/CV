@@ -5,7 +5,7 @@
         <div class="site-nav">
           <nav role="navigation">
               <ul class="nav justify-content-center">
-                <% @socials.each do |social| %>
+                <% socials.each do |social| %>
                   <%= render partial: 'home/partials/social', locals: social.as_json%>
                 <%end%>
               </ul>

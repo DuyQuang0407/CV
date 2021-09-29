@@ -12,9 +12,9 @@
   </head>
 
   <body>
-    <% if @profile %>
+    <% if @profile.present? %>
       <div class = "container">  
-        <%= render 'home/partials/header'%>
+        <%= render partial: 'home/partials/header', locals: {socials: @profile.socials}%>
       </div>
     <%end%>
     <%= yield %>

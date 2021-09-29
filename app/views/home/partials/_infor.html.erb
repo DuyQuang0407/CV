@@ -2,7 +2,7 @@
     <div class="row">
       <div class="col-md-6">
         <h2 class="h3 mb-3">About Me</h2>
-        <p><%= @profile.about.html_safe%></p>
+        <p><%= profile.about.html_safe%></p>
       </div>
       <div class="col-md-5 offset-md-1">
         <div class="row mt-2">
@@ -10,14 +10,14 @@
             <div class="pb-1">Age</div>
           </div>
           <div class="col-sm-8">
-            <div class="pb-1 text-secondary"><%= @profile.age%></div>
+            <div class="pb-1 text-secondary"><%= profile.age%></div>
           </div>
           <div class="col-sm-4">
             <div class="pb-1">Email</div>
           </div>
           <div class="col-sm-8">
             <div class="pb-1 text-secondary">
-              <%= link_to @profile.email,  "mailto:#{@profile.email}" %>
+              <%= link_to profile.email,  "mailto:#{profile.email}" %>
             </div>
           </div>
           <div class="col-sm-4">
@@ -25,14 +25,14 @@
           </div>
           <div class="col-sm-8">
             <div class="pb-1 text-secondary">
-              <%= link_to @profile.phone,  "tel:#{@profile.phone}" %>
+              <%= link_to profile.phone,  "tel:#{profile.phone}" %>
             </div>
           </div>
           <div class="col-sm-4">
             <div class="pb-1">Address</div>
           </div>
           <div class="col-sm-8">
-            <div class="pb-1 text-secondary"><%= @profile.addr %></div>
+            <div class="pb-1 text-secondary"><%= profile.addr %></div>
           </div>
         </div>
       </div>

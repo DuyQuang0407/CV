@@ -1,7 +1,7 @@
 <div class="skills-section px-3 px-lg-4">
     <h2 class="h3 mb-3">Professional Skills</h2>
     <div class="row">
-        <% @skills.each do |skill| %>
+        <% skills.each do |skill| %>
             <div class="col-md-6">
               <%= render partial: 'home/partials/skill_item', locals: skill.as_json%>
             </div>

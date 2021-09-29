@@ -1,0 +1,21 @@
+<div class="page-content">
+  <div class="container">
+    <div class="cover shadow-lg bg-white">
+      <!-- FRAMES INFORMATION -->
+      <%= render partial: 'home/partials/frames', locals: {profile: profile}%>
+      <!-- MY INFORMATION -->
+      <%= render partial: 'home/partials/infor', locals: {profile: profile}%>
+      <hr class="d-print-none"/>
+      <!-- SKILL INFORMATION -->
+      <%= render partial: 'home/partials/skill', locals: {skills: profile.skills}%>
+      <hr class="d-print-none"/> 
+      <!-- EDUCATION -->
+      <%= render partial: 'home/partials/education', locals: {educations: profile.educations}%>
+      <hr class="d-print-none"/>
+      <!-- PICTURES SLIDE SHOW -->
+      <%= render partial: 'home/partials/slide_show', locals: {slides: profile.slides}%>
+    </div>
+  </div>  
+</div>
+  
+  
