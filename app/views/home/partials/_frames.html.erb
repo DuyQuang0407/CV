@@ -9,8 +9,8 @@
       <h2 class="h1 mt-2"><%= @profile.fullname %></h2>
       <p>FullStack Developer</p>
       <div class="d-print-none">
-        <div class="btn btn-light text-dark shadow-sm mt-1 me-1">Download CV</div>
-        <a class="btn btn-success shadow-sm mt-1" href="#about_me">My Education</a>
+        <%= link_to 'Download CV',  'javascript:void(0)', class: 'btn btn-light text-dark shadow-sm mt-1 me-1' %>
+        <%= link_to 'Hire Me',  'javascript:void(0)', class: 'btn btn-success shadow-sm mt-1' %>
       </div>
     </div>
   </div>

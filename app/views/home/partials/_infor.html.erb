@@ -17,7 +17,7 @@
           </div>
           <div class="col-sm-8">
             <div class="pb-1 text-secondary">
-              <a href="mailto:<%= @profile.email %>"> <%= @profile.email %></a>
+              <%= link_to @profile.email,  "mailto:#{@profile.email}" %>
             </div>
           </div>
           <div class="col-sm-4">
@@ -25,7 +25,7 @@
           </div>
           <div class="col-sm-8">
             <div class="pb-1 text-secondary">
-              <a href="tel:<%= @profile.phone %>"> <%= @profile.phone %></a>
+              <%= link_to @profile.phone,  "tel:#{@profile.phone}" %>
             </div>
           </div>
           <div class="col-sm-4">
