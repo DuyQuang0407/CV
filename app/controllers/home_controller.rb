@@ -1,10 +1,7 @@
 class HomeController < ApplicationController
   def index
     @profile = Profile.by_username(params[:username]).first
-    # @socials = @profile.socials 
-    # @educations = @profile.educations
-    # @skills = @profile.skills
-    # @slides = @profile.slides
+
     respond_to do |format|
       format.html 
       format.pdf do

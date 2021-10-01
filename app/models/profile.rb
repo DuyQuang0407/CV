@@ -20,7 +20,7 @@ class Profile < ApplicationRecord
   has_many :skills
   has_many :slides
   scope :by_username, -> (username){
-    where(username:username)
+    where('username like ?', "%#{username}%")
   }
   def as_json(options = {})
     super.symbolize_keys.except!(:id, :created_at, :updated_at)
