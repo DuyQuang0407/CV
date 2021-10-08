@@ -3,7 +3,27 @@
   <div class="row">
     <div class="col-md-7 d-print-none">
       <div class="my-2">
-        <form>
+        <%= form_for :contact, url: contact_path do |f|%>
+          <div class="my-2">
+            <%= f.text_field :subject, class:"form-control", placeholder:"Your Subject" %>
+          </div>
+          <div class="row">
+            <div class="col-4">
+              <%= f.text_field :name, class:"form-control", placeholder:"Your Name" %>
+            </div> 
+            <div class="col-4">
+              <%= f.text_field :email, class:"form-control", placeholder:"Your E-mail" %>
+            </div>
+            <div class="col-4">
+              <%= f.text_field :phone, class:"form-control", placeholder:"Your Phone" %>
+            </div> 
+          </div>
+          <div class="form-group my-2">
+            <%= f.text_area :message, class:"form-control", id:"message", style:"resize: none", rows:"4", placeholder:"Your Message" %>
+          </div>
+          <%= f.submit 'Send', class:"btn btn-primary mt-2"%>  
+        <% end %>
+        <%# <form>
           <div class="my-2">
             <input class="form-control" type="text" id="subject" name="subject" placeholder="Your Subject" required> 
           </div>
@@ -22,7 +42,7 @@
             <textarea class="form-control" style="resize: none;" id="message" name="message" rows="4"  placeholder="Your Message" required></textarea>
           </div>
           <button class="btn btn-primary mt-2" type="submit">Send</button>
-        </form>
+        </form> %>
       </div>
     </div>
     <div class="col">
