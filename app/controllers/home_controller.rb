@@ -23,12 +23,12 @@ class HomeController < ApplicationController
   end
 
   def welcome
-    ContactMailer.with(info: welcome_params).contact.deliver_later
+    WelcomeMailer.with(info: welcome_params).welcome.deliver_later
     redirect_to root_path
   end
 
   private
   def welcome_params
-    params.require(:contact).permit(:subject, :name, :email, :phone, :message)
+    params.require(:welcome).permit(:subject, :name, :email, :phone, :message)
   end
 end
