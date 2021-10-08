@@ -1,11 +1,11 @@
 <div class="education-section px-3 px-lg-4 pb-4">
-    <h3 class="h3 mb-4">Pictures of Places I Studied</h3>
-    <div class="fas fa-ellipsis-h"></div>
-    <div id="slideshow">
-        <div class="slide-wrapper">
-            <% slides.each do |slide| %>
-              <%= render partial: 'home/partials/slide_item', locals: slide.as_json%>
-            <%end%>
-        </div>
-    </div>
+  <h3 class="h3 mb-4">Pictures of Places I Studied</h3>
+  <div class="fas fa-ellipsis-h"></div>
+  <div id="slideshow">
+    <div class="slide-wrapper">
+      <% slides.each do |slide| %>
+        <%= render partial: 'home/partials/slide_item', locals: slide.as_json%>
+      <%end%>
+    </div>  
+  </div>
 </div>
