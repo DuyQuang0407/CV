@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_09_29_065745) do
+ActiveRecord::Schema.define(version: 2021_10_09_093758) do
 
   create_table "administrators", force: :cascade do |t|
     t.string "email"
@@ -33,6 +33,14 @@ ActiveRecord::Schema.define(version: 2021_09_29_065745) do
     t.datetime "updated_at", precision: 6, null: false
     t.integer "profile_id"
     t.index ["profile_id"], name: "index_educations_on_profile_id"
+  end
+
+  create_table "jobs", force: :cascade do |t|
+    t.integer "status", default: 0
+    t.string "args"
+    t.integer "job_type", default: 0
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "profiles", force: :cascade do |t|
