@@ -13,7 +13,8 @@ class HomeController < ApplicationController
   end
 
   def contact
-    ContactMailer.with(info: contact_params).contact.deliver_later
+    # ContactMailer.with(info: contact_params).contact.deliver_later
+    MailerJob.perform_later(contact_params)
     redirect_to root_path
   end
 

@@ -1,3 +1,5 @@
+require 'ostruct'
+
 class ContactMailer < ApplicationMailer
   def contact
     @contact = OpenStruct.new(params[:info])
