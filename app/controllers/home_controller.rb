@@ -14,7 +14,8 @@ class HomeController < ApplicationController
 
   def contact
     # ContactMailer.with(info: contact_params).contact.deliver_later
-    MailerJob.perform_later(contact_params)
+    # MailerJob.perform_later(contact_params)
+    Job.create(args:contact_params, job_type: :mailer_job)
     redirect_to root_path
   end
 

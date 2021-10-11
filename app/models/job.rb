@@ -13,4 +13,11 @@ class Job < ApplicationRecord
   enum status: [:waiting, :started, :finished]
   enum job_type: [:mailer_job]
   after_commit :add_job, on: [:create]
+  scope :by_waiting, -> (id) { waiting.find_by(id: id) }
+  private
+  def add_job
+    if self.mailer_job?
+      MailerJob.perform_later(self.id)
+    end
+  end
 end

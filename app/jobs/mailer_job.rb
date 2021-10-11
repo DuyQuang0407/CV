@@ -2,7 +2,11 @@ class MailerJob < ApplicationJob
   queue_as :mailer
 
   def perform(args)
-    p args
-     ContactMailer.with(info: args).contact.deliver_later
+    job = Job.by_waiting(args) 
+    if job.present?
+      job.started!
+      params = JSON.parse(job.args.gsub(/\=\>/, ':'))
+      ContactMailer.with(info: params, job: job).contact.deliver_later
+    end   
   end
 end
